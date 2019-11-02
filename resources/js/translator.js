@@ -35,6 +35,7 @@ class Translator {
     }
 
     var path = `${this._options.filesLocation}/${this._lang}.json`;
+    console.log($path);
 
     fetch(path)
       .then((response) => response.json())
@@ -80,7 +81,7 @@ class Translator {
   }
 }
 
-export default Translator;
+//export default Translator;
 
 var translator = new Translator({
     persist: false,
