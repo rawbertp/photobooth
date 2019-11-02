@@ -124,6 +124,7 @@ require_once('../lib/configsetup.inc.php');
 <script type="text/javascript" src="../resources/js/theme.js"></script>
 <script type="text/javascript" src="../resources/js/admin.js"></script>
 <!--script type="text/javascript" src="../resources/lang/<?php echo $config['language']; ?>.js"></script-->
+<script type="text/javascript" src="../resources/js/translator.js"></script>
 
 </body>
 </html>
