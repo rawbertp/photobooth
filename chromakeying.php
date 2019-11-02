@@ -72,26 +72,26 @@ if (file_exists($keyingimage)) {
 		</div>
 
 		<div class="chroma-control-bar">
-			<a class="btn btn--flex" id="save-btn" href="#"><i class="fa fa-floppy-o"></i> <span data-l10n="save"></span></a>
+			<a class="btn btn--flex" id="save-btn" href="#"><i class="fa fa-floppy-o"></i> <span data-i18n="save"></span></a>
 
 			<?php if ($config['use_print']): ?>
-				<a class="btn btn--flex" id="print-btn" href="#"><i class="fa fa-print"></i> <span data-l10n="print"></span></a>
+				<a class="btn btn--flex" id="print-btn" href="#"><i class="fa fa-print"></i> <span data-i18n="print"></span></a>
 			<?php endif; ?>
 
-			<a class="btn btn--flex" id="close-btn" href="#"><i class="fa fa-times"></i> <span data-l10n="close"></span></a>
+			<a class="btn btn--flex" id="close-btn" href="#"><i class="fa fa-times"></i> <span data-i18n="close"></span></a>
 		</div>
 	<?php else:?>
 		<div style="text-align:center;padding-top:250px">
-			<h1 style="color: red;" data-l10n="keyingerror"></h1>
-			<a class="btn" href="./"><span data-l10n="close"></span></a>
+			<h1 style="color: red;" data-i18n="keyingerror"></h1>
+			<a class="btn" href="./"><span data-i18n="close"></span></a>
 		</div>
 	<?php endif; ?>
 
 		<div class="modal" id="print_mesg">
-			<div class="modal__body" id="print_mesg_text"><span data-l10n="printing"></span></div>
+			<div class="modal__body" id="print_mesg_text"><span data-i18n="printing"></span></div>
 		</div>
 		<div class="modal" id="save_mesg">
-			<div class="modal__body" id="save_mesg_text"><span data-l10n="saving"></span></div>
+			<div class="modal__body" id="save_mesg_text"><span data-i18n="saving"></span></div>
 		</div>
 	</div>
 	<script type="text/javascript" src="api/config.php"></script>

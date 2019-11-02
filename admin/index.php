@@ -31,23 +31,23 @@ require_once('../lib/configsetup.inc.php');
 		<h2><a class="back-to-pb" href="../">Photobooth</a></h2>
 		<button class="reset-btn">
 			<span class="save">
-				<span data-l10n="reset"></span>
+				<span data-i18n="reset"></span>
 			</span>
 			<span class="saving">
 				<i class="fa fa-circle-o-notch fa-spin fa-fw"></i>
-				<span data-l10n="saving"></span>
+				<span data-i18n="saving"></span>
 			</span>
 			<span class="success">
 				<i class="fa fa-check"></i>
-				<span data-l10n="success"></span>
+				<span data-i18n="success"></span>
 			</span>
 			<span class="error">
 				<i class="fa fa-times"></i>
-				<span data-l10n="saveerror"></span>
+				<span data-i18n="saveerror"></span>
 			</span>
 		</button>
 		<div id="checkVersion">
-			<p><a href="#" class="btn btn--tiny btn--flex"><span data-l10n="check_version"></span></a></p>
+			<p><a href="#" class="btn btn--tiny btn--flex"><span data-i18n="check_version"></span></a></p>
 		</div>
 		<div class="accordion">
 			<form>
@@ -58,7 +58,7 @@ require_once('../lib/configsetup.inc.php');
 						if($i == 0){
 							$open = ' open init';
 						}
-						echo '<div class="panel'.$open.'"><div class="panel-heading"><h3><span class="minus">-</span><span class="plus">+</span><span data-l10n="'.$panel.'">'.$panel.'</span></h3></div>
+						echo '<div class="panel'.$open.'"><div class="panel-heading"><h3><span class="minus">-</span><span class="plus">+</span><span data-i18n="'.$panel.'">'.$panel.'</span></h3></div>
 									<div class="panel-body">
 						';
 
@@ -66,7 +66,7 @@ require_once('../lib/configsetup.inc.php');
 							echo '<div class="form-row">';
 							switch($field['type']) {
 								case 'input':
-									echo '<label data-l10n="'.$panel.'_'.$key.'">'.$panel.'_'.$key.'</label><input type="text" name="'.$field['name'].'" value="'.$field[
+									echo '<label data-i18n="'.$panel.'_'.$key.'">'.$panel.'_'.$key.'</label><input type="text" name="'.$field['name'].'" value="'.$field[
 										'value'].'" placeholder="'.$field['placeholder'].'"/>';
 								break;
 								case 'checkbox':
@@ -74,11 +74,11 @@ require_once('../lib/configsetup.inc.php');
 									if ($field['value'] == 'true') {
 										$checked = ' checked="checked"';
 									}
-									echo '<label><input type="checkbox" '.$checked.' name="'.$field['name'].'" value="true"/><span data-l10n="'.$key.'">'.$key.'</span></label>';
+									echo '<label><input type="checkbox" '.$checked.' name="'.$field['name'].'" value="true"/><span data-i18n="'.$key.'">'.$key.'</span></label>';
 								break;
 								case 'select':
-									echo '<label data-l10n="'.$panel.'_'.$key.'">'.$panel.'_'.$key.'</label><select name="'.$field['name'].'">
-										<option data-l10n="'.$key.'"></option>
+									echo '<label data-i18n="'.$panel.'_'.$key.'">'.$panel.'_'.$key.'</label><select name="'.$field['name'].'">
+										<option data-i18n="'.$key.'"></option>
 									';
 										foreach($field['options'] as $val => $option) {
 											$selected = '';
@@ -99,19 +99,19 @@ require_once('../lib/configsetup.inc.php');
 			</form>
 			<button class="save-btn">
 				<span class="save">
-					<span data-l10n="save"></span>
+					<span data-i18n="save"></span>
 				</span>
 				<span class="saving">
 					<i class="fa fa-circle-o-notch fa-spin fa-fw"></i>
-					<span data-l10n="saving"></span>
+					<span data-i18n="saving"></span>
 				</span>
 				<span class="success">
 					<i class="fa fa-check"></i>
-					<span data-l10n="success"></span>
+					<span data-i18n="success"></span>
 				</span>
 				<span class="error">
 					<i class="fa fa-times"></i>
-					<span data-l10n="saveerror"></span>
+					<span data-i18n="saveerror"></span>
 				</span>
 			</button>
 		</div>
