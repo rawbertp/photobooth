@@ -35,7 +35,7 @@ class Translator {
     }
 
     var path = `${this._options.filesLocation}/${this._lang}.json`;
-    console.log($path);
+    console.log(path);
 
     fetch(path)
       .then((response) => response.json())
