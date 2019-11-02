@@ -120,10 +120,10 @@ require_once('../lib/configsetup.inc.php');
 </div>
 <script type="text/javascript" src="../api/config.php"></script>
 <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="../resources/js/l10n.js"></script>
+<!--script type="text/javascript" src="../resources/js/l10n.js"></script-->
 <script type="text/javascript" src="../resources/js/theme.js"></script>
 <script type="text/javascript" src="../resources/js/admin.js"></script>
-<script type="text/javascript" src="../resources/lang/<?php echo $config['language']; ?>.js"></script>
+<!--script type="text/javascript" src="../resources/lang/<?php echo $config['language']; ?>.js"></script-->
 
 </body>
 </html>
