@@ -184,6 +184,11 @@ const photoBooth = (function () {
         jQuery.post('api/takePic.php', data).done(function (result) {
             console.log('took picture', result);
 
+            // reset filter (selection) after picture was taken
+            imgFilter = config.default_imagefilter;
+            $('#mySidenav .activeSidenavBtn').removeClass('activeSidenavBtn');
+            $('#' + imgFilter).addClass('activeSidenavBtn');
+
             if (result.error) {
                 public.errorPic(result);
             } else if (result.success === 'collage' && (result.current + 1) < result.limit) {
@@ -315,7 +320,7 @@ const photoBooth = (function () {
         const preloadImage = new Image();
         preloadImage.onload = () => {
             resultPage.css({
-                'background-image': `url(${imageUrl})`,
+                'background-image': `url(${imageUrl}?filter=${imgFilter})`,
             });
             resultPage.attr('data-img', filename);
 
@@ -332,6 +337,7 @@ const photoBooth = (function () {
                 public.resetTimeOut();
             }
         };
+
         preloadImage.src = imageUrl;
     }
 
@@ -465,14 +471,14 @@ const photoBooth = (function () {
 
     $('.sidenav > div').on('click', function () {
         $('.sidenav > div').removeAttr('class');
-
         $(this).addClass('activeSidenavBtn');
 
         imgFilter = $(this).attr('id');
-
+        const result = {file: $('#result').attr('data-img')};
         if (config.dev) {
-            console.log('Active filter', imgFilter);
+            console.log('Applying filter', imgFilter, result);
         }
+        public.processPic(imgFilter, result);
     });
 
     // Take Picture Button
