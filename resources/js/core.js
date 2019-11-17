@@ -15,7 +15,8 @@ const photoBooth = (function () {
                 height: 480,
                 facingMode: 'user',
             }
-        };
+        },
+        collageLimit = 4;
 
     let timeOut,
         nextCollageNumber = 0,
@@ -154,6 +155,7 @@ const photoBooth = (function () {
             $('.loading').text(L10N.cheese);
         } else {
             $('.loading').text(L10N.cheeseCollage);
+            $('<p>').text(`${nextCollageNumber + 1} / ${collageLimit}`).appendTo('.loading');
         }
 
         setTimeout(() => {
@@ -192,12 +194,11 @@ const photoBooth = (function () {
 
                 $('.spinner').hide();
                 $('.loading').empty();
-                $('<p>').text(`${result.current + 1} / ${result.limit}`).appendTo('.loading');
 
                 if (config.continuous_collage) {
                     setTimeout(() => {
                         public.thrill('collage');
-                    }, 1000);
+                    }, 0);
                 } else {
                     $('<a class="btn" href="#">' + L10N.newPhoto + '</a>').appendTo('.loading').click((ev) => {
                         ev.preventDefault();
