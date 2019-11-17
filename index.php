@@ -77,11 +77,6 @@ $imagelist = ($config['newest_first'] === true) ? array_reverse($images) : $imag
                 </div>
                 <?php endif; ?>
 
-                <?php if ($config['use_filter']): ?>
-                <a href="#" class="btn imageFilter"><i class="fa fa-magic"></i> <span
-                        data-l10n="selectFilter"></span></a>
-                <?php endif; ?>
-
                 <?php if ($config['force_buzzer']): ?>
                 <div id="useBuzzer">
                         <span data-l10n="use_button"></span>
@@ -163,6 +158,10 @@ $imagelist = ($config['newest_first'] === true) ? array_reverse($images) : $imag
 
                 <?php if ($config['use_print']): ?>
                 <a href="#" class="btn printbtn"><i class="fa fa-print"></i> <span data-l10n="print"></span></a>
+                <?php endif; ?>
+
+                <?php if ($config['use_filter']): ?>
+                <a href="#" class="btn imageFilter"><i class="fa fa-magic"></i> <span data-l10n="selectFilter"></span></a>
                 <?php endif; ?>
 
                 <a href="#" class="btn deletebtn"><i class="fa fa-trash"></i> <span data-l10n="delete"></span></a>
