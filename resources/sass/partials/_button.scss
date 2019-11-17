@@ -29,6 +29,15 @@
     }
 }
 
+#result .btn {
+    font-size: 1.8vw;
+}
+
+#result .btn.newpic,
+#result .btn.newcollage {
+    font-weight: 600;
+}
+
 .btn.save-btn,
 .btn.install-btn {
     position: absolute;
